@@ -1,5 +1,5 @@
 # FanPI
-######A little program to cool automatically your Raspberry Pi with the temperature of your CPU. Works with Python.
+######A little program to cool automatically your Raspberry Pi with the temperature of your CPU. Warranty 100% Python.
 
 <img src="http://porostase.fr/upload/IMG_20150110_1828256.jpg">
 
