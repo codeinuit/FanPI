@@ -65,7 +65,7 @@ sudo python fanpi.py
 ```
 It's work ! Stop it with `CTRL+C`
 
-To start this program in background automatically (you should do it. Really), type `crontab -e` and add on last line `@reboot sudo python /python/FanPi/fanpi.py`.
+To start this program in background automatically (you should do it. Really), type `crontab -e` and add on last line `@reboot sudo python /python/FanPi/fanpi.py`. `CTRL+X` and `ENTER` to save.
 
 ##Configuration 
 If you want to configure the temperature of cooling, you have just to change two line in `/python/fanpi.py`, line 28 and 31.
@@ -75,5 +75,7 @@ line 31 : `while get_cpu_temperature() > 32.0:`
 
 let at least a difference of 10 between the two temperatures, the primary value design the temperature of starting the fan, and the second design the temperature of stop. 
 
-###Enjoy !
+##Start it !
+Let it be independant with a reboot (`sudo reboot`) and it's all !
+ENJOY IT /o/ !
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">FanPi</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">P147x</span> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>.
