@@ -67,8 +67,8 @@ To start this program in background automatically (you should do it. Really), ty
 ##Configuration 
 If you want to configure the temperature of cooling, you have just to change two line in `/python/fanpi.py`, line 28 and 31.
 
-line 28 : `if get_cpu_temperature() > 25.0:` <br />
-line 31 : `while get_cpu_temperature() > 15.0:`
+line 28 : `if get_cpu_temperature() > 38.0:` <br />
+line 31 : `while get_cpu_temperature() > 32.0:`
 
 let at least a difference of 10 between the two temperatures, the primary value design the temperature of starting the fan, and the second design the temperature of stop. 
 
