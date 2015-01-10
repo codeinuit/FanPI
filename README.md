@@ -32,7 +32,7 @@ sudo apt-get install python-psutil
 sudo apt-get update
 ```
 
-#Setup
+##Setup
 You can copy your program using a FTP client or using `git-core` using SSH. If you use SSH, check the version of the packages with 'git --version'. Now, we are going to clone the git in your Raspberry and try it. 
 ```
 git --version
@@ -50,7 +50,7 @@ Now, you can try, just do
 ```
 sudo python fanpi.py 
 ```
-It's work ! Now, stop it with `CTRL+C`
+It's work ! Stop it with `CTRL+C`
 ##Configuration 
 If you want to configure the temperature of cooling, you have just to change two line in `/python/fanpi.py`, line 28 and 31.
 
