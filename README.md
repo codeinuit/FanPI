@@ -27,10 +27,12 @@ The voltage of a GPIO is approximately equal to 3.3v, and is a bit too low to co
 The less easy part. Hehe, he. No. <br />
 ####Part 1 : With all requierement
 Connect a cable to the `+5v`, `GND` and to the `GPIO18` of your Raspberry Pi. We are going to use a transistor like a switch to use the `+5v` as `Vcc` and to use the `GPIO18` as a interrupter.
+<br /><br />
 <img src="http://porostase.fr/upload/FanPi_bb.jpg">
 
 ####Part 2 : With the minimal components (not recommended)
 Connect the `+` cable to the `GPIO18`, and the `-` to the `GND` pin.
+<br /><br />
 <img src="http://porostase.fr/upload/FanPi_bb4.jpg">
 
 ##Software requierement 
