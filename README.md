@@ -53,9 +53,10 @@ git --version
   sudo apt-get update
   
 cd /
-mkdir python
+sudo mkdir python
 cd /python
-git clone git://github.com/P147x/FanPI FanPI
+sudo git clone git://github.com/P147x/FanPI FanPI
+cd FanPi
 ```
 
 Now, you can try, just do 
@@ -64,7 +65,7 @@ sudo python fanpi.py
 ```
 It's work ! Stop it with `CTRL+C`
 
-To start this program in background automatically (you should do it. Really), type `crontab -e` and add on last line `@reboot sudo python /python/fanpi.py`.
+To start this program in background automatically (you should do it. Really), type `crontab -e` and add on last line `@reboot sudo python /python/FanPi/fanpi.py`.
 
 ##Configuration 
 If you want to configure the temperature of cooling, you have just to change two line in `/python/fanpi.py`, line 28 and 31.
