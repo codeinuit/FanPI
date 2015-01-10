@@ -4,7 +4,7 @@
 <img src="http://porostase.fr/upload/IMG_20150110_1828256.jpg">
 
 
-##What you requiert to build that 
+##What you requiere to build that 
 - Raspberry Pi (used Raspbian)
 - A little fan (omg no?)
 - 2 jumpercables females
@@ -63,7 +63,7 @@ Now, you can try, just do
 ```
 sudo python fanpi.py 
 ```
-It's work ! Stop it with `CTRL+C`
+It work ! Stop it with `CTRL+C`
 
 To start this program in background automatically (you should do it. Really), type `crontab -e` and add on last line `@reboot sudo python /python/FanPi/fanpi.py`. `CTRL+X` and `ENTER` to save.
 
