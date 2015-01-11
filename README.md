@@ -1,5 +1,5 @@
 # FanPI
-######A little program to cool automatically your Raspberry Pi with the temperature of your CPU. Warranty 100% Python.
+######A small program to automatically cool your Raspberry Pi according to the temperature of its CPU. Warranty 100% Python.
 
 <img src="http://porostase.fr/upload/IMG_20150110_1828256.jpg">
 
@@ -9,24 +9,24 @@
 - A little fan (omg no?)
 - 2 jumpercables females
 - 8 jumpercables males
-- 1 transistor (here used a KN2222A)
+- 1 transistor (a KN2222A is used here)
 - 1 resistance (1KOHM)
 - A Breadboard
 
-##Requiert to build that if you don't have some components ~ 
+##Requiert to build that if you don't have all of the components ~ 
 - Raspberry Pi (used Raspbian)
 - A little fan (too expensive D:)
 - 2 jumpercables females
 
 That's all ? Oh.
 
-##What's the difference about the both ?
-The voltage of a GPIO is approximately equal to 3.3v, and is a bit too low to cool normally. So, I advice to use the +5v to had a great cooling, but you can choice what you prefer, the both works with the same program. (IT'S MAGIC °3°)
+##What's the difference between both ?
+The voltage of a GPIO is approximately equal to 3.3v, it is a bit too low to cool normally. So, I advise to use the +5v to have a great cooling, but you can choos what you prefer, both work with the same program. (IT'S MAGIC °3°)
 
 ##Assembling
 The less easy part. Hehe, he. No. <br />
 ####Part 1 : With all requierement
-Connect a cable to the `+5v`, `GND` and to the `GPIO18` of your Raspberry Pi. We are going to use a transistor like a switch to use the `+5v` as `Vcc` and to use the `GPIO18` as a interrupter.
+Connect a cable to the `+5v`, `GND` and to the `GPIO18` of your Raspberry Pi. We are going to use a transistor as a switch to use the `+5v` as `Vcc` and to use the `GPIO18` as an interrupter.
 <br /><br />
 <img src="http://porostase.fr/upload/FanPi_bb.jpg">
 
@@ -36,12 +36,11 @@ Connect the `+` cable to the `GPIO18`, and the `-` to the `GND` pin.
 <img src="http://porostase.fr/upload/FanPi_bb4.jpg">
 
 ##Software requierement 
-You need to have Python to execute the program and Psutil to get information about your CPU. So here we go ~
+You need to have Python to execute the program and Psutil to get informations about your CPU. So here we go ~
 
 ```
-sudo apt-get install python
-sudo apt-get install python-psutil
 sudo apt-get update
+sudo apt-get install python python-psutil
 ```
 
 ##Setup
@@ -49,8 +48,8 @@ You can copy your program using a FTP client or using `git-core` using SSH. If y
 ```
 git --version
 // if git-core is not installed
-  sudo apt-get install git-core
   sudo apt-get update
+  sudo apt-get install git-core
   
 cd 
 sudo mkdir python
@@ -63,17 +62,17 @@ Now, you can try, just do
 ```
 sudo python fanpi.py 
 ```
-It work ! Stop it with `CTRL+C`
+It works ! Stop it with `CTRL+C`
 
 To start this program in background automatically (you should do it. Really), type `crontab -e` and add on last line `@reboot sudo python /home/pi/python/FanPi/fanpi.py`. `CTRL+X` and `O` to save.
 
 ##Configuration 
-If you want to configure the temperature of cooling, you have just to change two line in `/home/pi/fanpi.py`, line 28 and 31.
+If you want to configure the temperature of cooling, you just have to change two lines in `/home/pi/fanpi.py`, line 28 and 31.
 
 line 28 : `if get_cpu_temperature() > 38.0:` <br />
 line 31 : `while get_cpu_temperature() > 32.0:`
 
-let at least a difference of 10 between the two temperatures, the primary value design the temperature of starting the fan, and the second design the temperature of stop. 
+Keep at least a difference of ~10°C between the two temperatures, the first value design the temperature of starting the fan, and the second design the temperature of stop. 
 
 ##Start it !
 Let it be independant with a reboot (`sudo reboot`) and it's all !<br />
