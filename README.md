@@ -52,7 +52,7 @@ git --version
   sudo apt-get install git-core
   sudo apt-get update
   
-cd /
+cd 
 sudo mkdir python
 cd /python
 sudo git clone git://github.com/P147x/FanPI FanPI
@@ -65,10 +65,10 @@ sudo python fanpi.py
 ```
 It work ! Stop it with `CTRL+C`
 
-To start this program in background automatically (you should do it. Really), type `crontab -e` and add on last line `@reboot sudo python /python/FanPi/fanpi.py`. `CTRL+X` and `ENTER` to save.
+To start this program in background automatically (you should do it. Really), type `crontab -e` and add on last line `@reboot sudo python /home/pi/python/FanPi/fanpi.py`. `CTRL+X` and `O` to save.
 
 ##Configuration 
-If you want to configure the temperature of cooling, you have just to change two line in `/python/fanpi.py`, line 28 and 31.
+If you want to configure the temperature of cooling, you have just to change two line in `/home/pi/fanpi.py`, line 28 and 31.
 
 line 28 : `if get_cpu_temperature() > 38.0:` <br />
 line 31 : `while get_cpu_temperature() > 32.0:`
@@ -76,6 +76,6 @@ line 31 : `while get_cpu_temperature() > 32.0:`
 let at least a difference of 10 between the two temperatures, the primary value design the temperature of starting the fan, and the second design the temperature of stop. 
 
 ##Start it !
-Let it be independant with a reboot (`sudo reboot`) and it's all !
-ENJOY IT /o/ !
+Let it be independant with a reboot (`sudo reboot`) and it's all !<br />
+ENJOY IT /o/ !<br /><br />
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">FanPi</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">P147x</span> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>.
