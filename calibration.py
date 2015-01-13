@@ -24,17 +24,24 @@ try:
         def main():
             cpu_temperature = get_cpu_temperature()
         
+        #Temperatures to define (Max : Beginning) (Min : End)
+        #Recommended for Turbo (Max : 43; Min : 37)
+        #Recommended for Modest (Max : 41; Min : 35) 
         max_temp = 41
         min_temp = 35
 
         if get_cpu_temperature() > max_temp:
             while get_cpu_temperature() > min_temp:
+                print ('['),time.strftime("%H:%M:%S"),(']'),(': FAN Online')
+                print ('Temp :'), get_cpu_temperature(), ('/ Min :'), min_temp
                 GPIO.output(18, True)
-                time.sleep(5)
+                time.sleep(1)
             GPIO.output(18, False)
         else:
+            print ('['),time.strftime("%H:%M:%S"),(']'),(': FAN Offline')
+            print ('Temp :'), get_cpu_temperature(), ('/ Max :'), max_temp
             GPIO.output(18, False)
-            time.sleep(5)
+            time.sleep(1)
         
         
 
