@@ -87,11 +87,11 @@ Let it be independant with a reboot (`sudo reboot`) and it's all !<br />
 ENJOY IT /o/ !<br /><br />
 
 <br />
-<br />
 ##Update notes
 ####V1.1
 - Patch some bugs 
 - Found better temperatures (max-min)
 - New file : `calibration.py` !
 - More bananas
+<br /><br />
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">FanPi</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">P147x</span> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>.
