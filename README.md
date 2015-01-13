@@ -67,6 +67,14 @@ It works ! Stop it with `CTRL+C`
 To start this program in background automatically (you should do it. Really), type `crontab -e` and add on last line `@reboot sudo python /home/pi/python/FanPi/fanpi.py`. `CTRL+X` and `O` to save.
 
 ##Configuration 
+####Calibrate
+You can calibrate your program with your fan, to make some tests and adapt it for your utilisation.
+```
+sudo nano /home/pi/python/FanPi/calibrate.py
+```
+Modify the line 30 and 31 (starting temp and stop), and type `sudo python /home/pi/python/FanPi/calibrate.py` and make your own tests !
+
+####Configure the main file o/ !
 If you want to configure the temperature of cooling, you just have to change two lines in `/home/pi/fanpi.py`, line 28 and 31.
 
 line 28 : `if get_cpu_temperature() > 38.0:` <br />
@@ -77,4 +85,13 @@ Keep at least a difference of ~10°C between the two temperatures, the first val
 ##Start it !
 Let it be independant with a reboot (`sudo reboot`) and it's all !<br />
 ENJOY IT /o/ !<br /><br />
+
+<br />
+<br />
+##Update notes
+####V1.1
+- Patch some bugs 
+- Found better temperatures (max-min)
+- New file : `calibration.py` !
+- More bananas
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">FanPi</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">P147x</span> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>.
