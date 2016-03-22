@@ -4,7 +4,7 @@
 <img src="http://porostase.fr/upload/IMG_20150110_1828256.jpg">
 
 
-##What you requiere to build that 
+##What you requiert to build that 
 - Raspberry Pi (used Raspbian)
 - A little fan (omg no?)
 - 2 jumpercables females
